@@ -30,6 +30,7 @@ Partial Class FormLogin
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.PictureBoxUser = New System.Windows.Forms.PictureBox()
 		Me.PictureBoxbackGround = New System.Windows.Forms.PictureBox()
+		Me.LabelStatus = New System.Windows.Forms.Label()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBoxUser, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBoxbackGround, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -40,7 +41,7 @@ Partial Class FormLogin
 		Me.LabelLogo.AutoSize = True
 		Me.LabelLogo.Font = New System.Drawing.Font("Rockwell Extra Bold", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.LabelLogo.ForeColor = System.Drawing.Color.AliceBlue
-		Me.LabelLogo.Location = New System.Drawing.Point(61, 119)
+		Me.LabelLogo.Location = New System.Drawing.Point(67, 119)
 		Me.LabelLogo.Name = "LabelLogo"
 		Me.LabelLogo.Size = New System.Drawing.Size(170, 32)
 		Me.LabelLogo.TabIndex = 0
@@ -124,12 +125,22 @@ Partial Class FormLogin
 		Me.PictureBoxbackGround.TabIndex = 1
 		Me.PictureBoxbackGround.TabStop = False
 		'
+		'LabelStatus
+		'
+		Me.LabelStatus.AutoSize = True
+		Me.LabelStatus.Location = New System.Drawing.Point(196, 372)
+		Me.LabelStatus.Name = "LabelStatus"
+		Me.LabelStatus.Size = New System.Drawing.Size(10, 13)
+		Me.LabelStatus.TabIndex = 8
+		Me.LabelStatus.Text = "."
+		'
 		'FormLogin
 		'
 		Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
 		Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
 		Me.BackColor = System.Drawing.Color.CornflowerBlue
 		Me.ClientSize = New System.Drawing.Size(299, 394)
+		Me.Controls.Add(Me.LabelStatus)
 		Me.Controls.Add(Me.ButtonCancel)
 		Me.Controls.Add(Me.ButtonLogin)
 		Me.Controls.Add(Me.TextBoxPassword)
@@ -158,4 +169,5 @@ Partial Class FormLogin
 	Friend WithEvents TextBoxPassword As TextBox
 	Friend WithEvents ButtonLogin As Button
 	Friend WithEvents ButtonCancel As Button
+	Public WithEvents LabelStatus As Label
 End Class

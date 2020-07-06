@@ -17,11 +17,11 @@
     End Sub
 
     Private Sub ButtonLogin_Click(sender As Object, e As EventArgs) Handles ButtonLogin.Click
-        If TextBoxUserName.Text = "Agahari" And TextBoxPassword.Text = "Admin" Then
-            MsgBox("Test")
-        Else
-            MsgBox("Gagal")
+        Call KoneksiUserAdmin()
+        If 
+    End Sub
 
-        End If
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Call KoneksiUserAdmin()
     End Sub
 End Class
