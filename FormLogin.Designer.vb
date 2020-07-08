@@ -25,12 +25,12 @@ Partial Class FormLogin
 		Me.LabelLogo = New System.Windows.Forms.Label()
 		Me.TextBoxUserName = New System.Windows.Forms.TextBox()
 		Me.TextBoxPassword = New System.Windows.Forms.TextBox()
+		Me.LabelStatus = New System.Windows.Forms.Label()
 		Me.ButtonCancel = New System.Windows.Forms.Button()
 		Me.ButtonLogin = New System.Windows.Forms.Button()
 		Me.PictureBox1 = New System.Windows.Forms.PictureBox()
 		Me.PictureBoxUser = New System.Windows.Forms.PictureBox()
 		Me.PictureBoxbackGround = New System.Windows.Forms.PictureBox()
-		Me.LabelStatus = New System.Windows.Forms.Label()
 		CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBoxUser, System.ComponentModel.ISupportInitialize).BeginInit()
 		CType(Me.PictureBoxbackGround, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,6 +51,7 @@ Partial Class FormLogin
 		'
 		Me.TextBoxUserName.BackColor = System.Drawing.Color.WhiteSmoke
 		Me.TextBoxUserName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.TextBoxUserName.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
 		Me.TextBoxUserName.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.TextBoxUserName.Location = New System.Drawing.Point(107, 166)
 		Me.TextBoxUserName.Name = "TextBoxUserName"
@@ -61,11 +62,22 @@ Partial Class FormLogin
 		'
 		Me.TextBoxPassword.BackColor = System.Drawing.Color.WhiteSmoke
 		Me.TextBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+		Me.TextBoxPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
 		Me.TextBoxPassword.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
 		Me.TextBoxPassword.Location = New System.Drawing.Point(107, 206)
 		Me.TextBoxPassword.Name = "TextBoxPassword"
+		Me.TextBoxPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
 		Me.TextBoxPassword.Size = New System.Drawing.Size(119, 29)
 		Me.TextBoxPassword.TabIndex = 5
+		'
+		'LabelStatus
+		'
+		Me.LabelStatus.AutoSize = True
+		Me.LabelStatus.Location = New System.Drawing.Point(196, 372)
+		Me.LabelStatus.Name = "LabelStatus"
+		Me.LabelStatus.Size = New System.Drawing.Size(10, 13)
+		Me.LabelStatus.TabIndex = 8
+		Me.LabelStatus.Text = "."
 		'
 		'ButtonCancel
 		'
@@ -124,15 +136,6 @@ Partial Class FormLogin
 		Me.PictureBoxbackGround.Size = New System.Drawing.Size(263, 523)
 		Me.PictureBoxbackGround.TabIndex = 1
 		Me.PictureBoxbackGround.TabStop = False
-		'
-		'LabelStatus
-		'
-		Me.LabelStatus.AutoSize = True
-		Me.LabelStatus.Location = New System.Drawing.Point(196, 372)
-		Me.LabelStatus.Name = "LabelStatus"
-		Me.LabelStatus.Size = New System.Drawing.Size(10, 13)
-		Me.LabelStatus.TabIndex = 8
-		Me.LabelStatus.Text = "."
 		'
 		'FormLogin
 		'
